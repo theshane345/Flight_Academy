@@ -20,15 +20,18 @@ public class PlayerController : MonoBehaviour
     [Header("Control Throw")]
     [SerializeField] float ControlPitch = 14.5f;
     [SerializeField] float ControlRoll = -40.5f;
-    
-    
+
+    [Header("Death Score")]
+    [SerializeField] int scorePerHit = 10;
+
+    ScoreBosrd scoreBosrd;
 
     float yThrow, xThrow;
     bool isDead = true;
     // Start is called before the first frame update
     void Start()
     {
-
+        scoreBosrd = FindObjectOfType<ScoreBosrd>();
     }
 
    
@@ -46,6 +49,7 @@ public class PlayerController : MonoBehaviour
 
     void OnPlayerDeath()
     {
+        scoreBosrd.DeathHit(scorePerHit);
         isDead = false;
         
     }
