@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
+        //iveaddedcode//
         scoreBosrd.Hit(scorePerHit);
         GameObject fx = Instantiate(ExplosionM, transform.position, Quaternion.identity);
         fx.transform.parent = parent;
