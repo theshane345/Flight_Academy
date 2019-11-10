@@ -493,6 +493,7 @@ MonoBehaviour:
   ExplosionM: {fileID: 2073789701284535681, guid: e200281f87926b146a52951c2f37e2f1,
     type: 3}
   parent: {fileID: 1048884923}
+  hits: 4
   scorePerHit: 50
 --- !u!54 &514806970
 Rigidbody:
@@ -615,6 +616,12 @@ MonoBehaviour:
   progressStyle: 0
   pointToPointThreshold: 4
   target: {fileID: 534669905}
+--- !u!1 &563644593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1016578054, guid: d7027a7c0e37eec46b38c80044a2c9e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3165826393730301235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &588484701 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1238095480485456, guid: bf374732b0ea2c34daa340dc2de7f746,
@@ -636,6 +643,7 @@ MonoBehaviour:
   ExplosionM: {fileID: 2073789701284535681, guid: e200281f87926b146a52951c2f37e2f1,
     type: 3}
   parent: {fileID: 1048884923}
+  hits: 4
   scorePerHit: 12
 --- !u!54 &588484705
 Rigidbody:
@@ -674,6 +682,7 @@ MonoBehaviour:
   ExplosionM: {fileID: 2073789701284535681, guid: e200281f87926b146a52951c2f37e2f1,
     type: 3}
   parent: {fileID: 1048884923}
+  hits: 2
   scorePerHit: 50
 --- !u!54 &592279571
 Rigidbody:
@@ -922,15 +931,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232234352724882, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -100.79
+      value: -137.5
       objectReference: {fileID: 0}
     - target: {fileID: 4232234352724882, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -87.63602
+      value: -66.9
       objectReference: {fileID: 0}
     - target: {fileID: 4232234352724882, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.03
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 4232234352724882, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_LocalRotation.x
@@ -999,6 +1008,7 @@ MonoBehaviour:
   ExplosionM: {fileID: 2073789701284535681, guid: e200281f87926b146a52951c2f37e2f1,
     type: 3}
   parent: {fileID: 1048884923}
+  hits: 4
   scorePerHit: 12
 --- !u!54 &807839938
 Rigidbody:
@@ -1133,6 +1143,9 @@ MonoBehaviour:
   Speed: 10
   xRangeAccross: 6
   yRangeUp: 2.5
+  Guns:
+  - {fileID: 1301776964}
+  - {fileID: 563644593}
   PitchPos: -4.5
   YawPos: 4.5
   ControlPitch: 14.5
@@ -1490,6 +1503,7 @@ MonoBehaviour:
   ExplosionM: {fileID: 2073789701284535681, guid: e200281f87926b146a52951c2f37e2f1,
     type: 3}
   parent: {fileID: 1048884923}
+  hits: 4
   scorePerHit: 50
 --- !u!54 &1139454638
 Rigidbody:
@@ -1507,6 +1521,44 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &1139454641
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139454635}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!320 &1139454642
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139454635}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 16f0f595548187d4cb6fc593d62fd65e, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114503997361538442, guid: 16f0f595548187d4cb6fc593d62fd65e, type: 2}
+    value: {fileID: 1139454641}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1146538522 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1090395654553690, guid: e14d375f5a36551479fc2f172353b1ba,
@@ -1534,6 +1586,7 @@ MonoBehaviour:
   ExplosionM: {fileID: 2073789701284535681, guid: e200281f87926b146a52951c2f37e2f1,
     type: 3}
   parent: {fileID: 1048884923}
+  hits: 4
   scorePerHit: 50
 --- !u!54 &1146538525
 Rigidbody:
@@ -1581,6 +1634,12 @@ Transform:
   m_Father: {fileID: 1916662871}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1301776964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 425484828, guid: d7027a7c0e37eec46b38c80044a2c9e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3165826393730301235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1347504985
 GameObject:
   m_ObjectHideFlags: 0
@@ -6744,6 +6803,7 @@ MonoBehaviour:
   ExplosionM: {fileID: 2073789701284535681, guid: e200281f87926b146a52951c2f37e2f1,
     type: 3}
   parent: {fileID: 1048884923}
+  hits: 4
   scorePerHit: 50
 --- !u!54 &1771449543
 Rigidbody:
@@ -7051,6 +7111,7 @@ MonoBehaviour:
   ExplosionM: {fileID: 2073789701284535681, guid: e200281f87926b146a52951c2f37e2f1,
     type: 3}
   parent: {fileID: 1048884923}
+  hits: 4
   scorePerHit: 50
 --- !u!54 &1992411234
 Rigidbody:
@@ -7245,6 +7306,14 @@ PrefabInstance:
     - target: {fileID: 1016578057, guid: d7027a7c0e37eec46b38c80044a2c9e2, type: 3}
       propertyPath: CollisionModule.collisionMessages
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 425484828, guid: d7027a7c0e37eec46b38c80044a2c9e2, type: 3}
+      propertyPath: m_Name
+      value: GunLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016578054, guid: d7027a7c0e37eec46b38c80044a2c9e2, type: 3}
+      propertyPath: m_Name
+      value: GunRight
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 831696973, guid: d7027a7c0e37eec46b38c80044a2c9e2, type: 3}
